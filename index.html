@@ -3,187 +3,225 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Agos Coffe</title>
+    <link rel="icon" type="image/png" href="images/AGOS-FAVICON.svg" />
+    <title>Agos Coffee</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-left">
-        <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
-        <div class="brand">
-          <h1>Agos Coffee</h1>
-          <small class="tagline">Need that caffeine flow</small>
-        </div>
-      </div>
-
-      <div class="header-right">
-        <div class="search-wrap">
-          <input
-            type="search"
-            id="search"
-            placeholder="Search products..."
-            aria-label="Search products"
-          />
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="header-left">
+          <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+          <div class="brand">
+            <h1>Agos Coffee</h1>
+            <small class="tagline">Need that caffeine flow</small>
+          </div>
         </div>
 
-        <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
-          <span class="cart-icon">🛒</span>
-          <span id="cart-count" class="cart-count">0</span>
-        </button>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="content-left">
-        <h2 class="section-title">Specialty</h2>
-
-        <div class="product-grid" id="productGrid">
-          <article
-            class="product-card"
-            data-name="Agos Specialty"
-            data-price="150"
-            data-img="images/AGOS-SPECIALTY.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Agos Specialty</h3>
-              <p class="product-desc">Espresso + Oatside + Condensed + Cocoa</p>
-              <div class="product-price">₱150</div>
-            </div>
-            <div class="product-media">
-              <img src="images/AGOS-SPECIALTY.svg" alt="Agos Specialty" />
-              <button class="add-btn" aria-label="Add Agos Specialty to cart">
-                +
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="product-card"
-            data-name="Spanish Latte"
-            data-price="140"
-            data-img="images/SPANISH-LATTE.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Spanish Latte</h3>
-              <p class="product-desc">Espresso + Condensed + Milk + Cinnamon</p>
-              <div class="product-price">₱140</div>
-            </div>
-            <div class="product-media">
-              <img src="images/SPANISH-LATTE.svg" alt="Spanish Latte" />
-              <button class="add-btn" aria-label="Add Spanish Latte to cart">
-                +
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="product-card"
-            data-name="Matcha Oatside"
-            data-price="160"
-            data-img="images/MATCHA-OATSIDE.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Matcha Oatside</h3>
-              <p class="product-desc">Matcha + Oatside</p>
-              <div class="product-price">₱160</div>
-            </div>
-            <div class="product-media">
-              <img src="images/MATCHA-OATSIDE.svg" alt="Matcha Oatside" />
-              <button class="add-btn" aria-label="Add Matcha Oatside to cart">
-                +
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="product-card"
-            data-name="Pink Quencher"
-            data-price="130"
-            data-img="images/PINK-QUENCHER.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Pink Quencher</h3>
-              <p class="product-desc">Strawberry + Lychee</p>
-              <div class="product-price">₱130</div>
-            </div>
-            <div class="product-media">
-              <img src="images/PINK-QUENCHER.svg" alt="Pink Quencher" />
-              <button class="add-btn" aria-label="Add Pink Quencher to cart">
-                +
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="product-card"
-            data-name="Matcha Sea Salt"
-            data-price="170"
-            data-img="images/MATCHA-SEA-SALT.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Matcha Sea Salt</h3>
-              <p class="product-desc">Matcha + Milk + Sea Salt Cream</p>
-              <div class="product-price">₱170</div>
-            </div>
-            <div class="product-media">
-              <img src="images/MATCHA-SEA-SALT.svg" alt="Matcha Sea Salt" />
-              <button class="add-btn" aria-label="Add Matcha Sea Salt to cart">
-                +
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="product-card"
-            data-name="Dirty White"
-            data-price="150"
-            data-img="images/DIRTY-WHITE.svg"
-          >
-            <div class="product-info">
-              <h3 class="product-title">Dirty White</h3>
-              <p class="product-desc">Espresso + Condensed + Milk + Caramel</p>
-              <div class="product-price">₱150</div>
-            </div>
-            <div class="product-media">
-              <img src="images/DIRTY-WHITE.svg" alt="Dirty White" />
-              <button class="add-btn" aria-label="Add Dirty White to cart">
-                +
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <aside class="cart-panel" id="cartPanel" aria-live="polite">
-        <div class="cart-header">
-          <h3>Your cart</h3>
-          <small class="cart-mode">Pick-up</small>
-        </div>
-
-        <div id="cartBody" class="cart-body">
-          <div class="empty-illustration">
-            <img
-              src="images/CART-PANEL.svg"
-              alt="Empty Cart"
-              class="empty-cart-img"
+        <div class="header-right">
+          <div class="search-wrap">
+            <img src="images/SEARCH-ICON.SVG" alt="Search" class="search-img" />
+            <input
+              type="search"
+              id="search"
+              placeholder="Search products..."
+              aria-label="Search products"
             />
-            <h4>Hungry?</h4>
-            <p>You haven't added anything to your cart!</p>
           </div>
-        </div>
 
-        <div id="cartFooter" class="cart-footer">
-          <div class="cart-total-row">
-            <span>Total</span>
-            <span id="cartTotal">₱0</span>
-          </div>
-          <button id="checkoutBtn" class="checkout-btn" disabled>
-            Checkout
+          <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
+            <img src="images/CART-QTY.svg" alt="Cart" class="cart-img" />
+            <span id="cart-count" class="cart-count">0</span>
           </button>
         </div>
-      </aside>
-    </main>
+      </header>
 
-    <script src="script.js"></script>
+      <main class="container">
+        <section class="content-left">
+          <h2 class="section-title">Popular</h2>
+
+          <!-- Product grid -->
+          <div class="product-grid" id="productGrid">
+            <article
+              class="product-card"
+              data-name="Agos Specialty"
+              data-price="150"
+              data-img="images/AGOS-SPECIALTY.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Agos Specialty</h3>
+                <p class="product-desc">
+                  Espresso + Oatside + Condensed + Cocoa
+                </p>
+                <div class="product-price">₱150</div>
+              </div>
+              <div class="product-media">
+                <img src="images/AGOS-SPECIALTY.svg" alt="Agos Specialty" />
+                <button class="add-btn" aria-label="Add Agos Specialty to cart">
+                  +
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="product-card"
+              data-name="Spanish Latte"
+              data-price="140"
+              data-img="images/SPANISH-LATTE.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Spanish Latte</h3>
+                <p class="product-desc">
+                  Espresso + Condensed + Milk + Cinnamon
+                </p>
+                <div class="product-price">₱140</div>
+              </div>
+              <div class="product-media">
+                <img src="images/SPANISH-LATTE.svg" alt="Spanish Latte" />
+                <button class="add-btn" aria-label="Add Spanish Latte to cart">
+                  +
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="product-card"
+              data-name="Matcha Oatside"
+              data-price="160"
+              data-img="images/MATCHA-OATSIDE.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Matcha Oatside</h3>
+                <p class="product-desc">Matcha + Oatside</p>
+                <div class="product-price">₱160</div>
+              </div>
+              <div class="product-media">
+                <img src="images/MATCHA-OATSIDE.svg" alt="Matcha Oatside" />
+                <button class="add-btn" aria-label="Add Matcha Oatside to cart">
+                  +
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="product-card"
+              data-name="Pink Quencher"
+              data-price="130"
+              data-img="images/PINK-QUENCHER.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Pink Quencher</h3>
+                <p class="product-desc">Strawberry + Lychee</p>
+                <div class="product-price">₱130</div>
+              </div>
+              <div class="product-media">
+                <img src="images/PINK-QUENCHER.svg" alt="Pink Quencher" />
+                <button class="add-btn" aria-label="Add Pink Quencher to cart">
+                  +
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="product-card"
+              data-name="Matcha Sea Salt"
+              data-price="170"
+              data-img="images/MATCHA-SEA-SALT.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Matcha Sea Salt</h3>
+                <p class="product-desc">Matcha + Milk + Sea Salt Cream</p>
+                <div class="product-price">₱170</div>
+              </div>
+              <div class="product-media">
+                <img src="images/MATCHA-SEA-SALT.svg" alt="Matcha Sea Salt" />
+                <button
+                  class="add-btn"
+                  aria-label="Add Matcha Sea Salt to cart"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+
+            <article
+              class="product-card"
+              data-name="Dirty White"
+              data-price="150"
+              data-img="images/DIRTY-WHITE.svg"
+            >
+              <div class="product-info">
+                <h3 class="product-title">Dirty White</h3>
+                <p class="product-desc">
+                  Espresso + Condensed + Milk + Caramel
+                </p>
+                <div class="product-price">₱150</div>
+              </div>
+              <div class="product-media">
+                <img src="images/DIRTY-WHITE.svg" alt="Dirty White" />
+                <button class="add-btn" aria-label="Add Dirty White to cart">
+                  +
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- No results message -->
+          <div id="noResults" class="no-results">
+            <img src="images/NO-RESULTS.svg" alt="No results" />
+            <p>No products found</p>
+          </div>
+        </section>
+
+        <aside class="cart-panel" id="cartPanel" aria-live="polite">
+          <div class="cart-header">
+            <h3>Your cart</h3>
+            <small class="cart-mode">Pick-up</small>
+          </div>
+
+          <div id="cartBody" class="cart-body">
+            <div class="empty-illustration">
+              <img
+                src="images/CART-PANEL.svg"
+                alt="Empty Cart"
+                class="empty-cart-img"
+              />
+              <h4>Hungry?</h4>
+              <p>You haven't added anything to your cart!</p>
+            </div>
+          </div>
+
+          <div id="cartFooter" class="cart-footer">
+            <div class="cart-total-row">
+              <span>Total</span>
+              <span id="cartTotal">₱0</span>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn" disabled>
+              Checkout
+            </button>
+          </div>
+        </aside>
+      </main>
+
+      <!-- Confirmation Modal -->
+      <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+          <h3>Confirm Order</h3>
+          <p>Are you sure you want to checkout?</p>
+          <div class="modal-actions">
+            <button id="cancelCheckout" class="btn cancel-btn">Cancel</button>
+            <button id="confirmCheckout" class="btn confirm-btn">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+
+      <footer class="site-footer">
+        <p>&copy; 2025 Agos Coffee. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>
