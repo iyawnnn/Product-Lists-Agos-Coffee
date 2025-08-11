@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="checkout-page">
-    
-    <!-- Header -->
-    <header class="site-header">
+    <!-- Desktop Header -->
+    <header class="site-header desktop-header">
       <div class="header-left">
-        <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+        <a href="index.html">
+          <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+        </a>
         <div class="brand">
           <h1>Agos Coffee</h1>
           <small class="tagline">Need that caffeine flow</small>
@@ -29,14 +30,43 @@
             aria-label="Search products"
           />
         </div>
-
         <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
           <img src="images/CART-QTY.svg" alt="Cart" class="cart-img" />
+          <span id="cart-count" class="cart-count">0</span>
         </button>
       </div>
     </header>
 
-    <!-- Thank You Section -->
+    <!-- Mobile Header -->
+    <header class="site-header mobile-header">
+      <div class="mobile-search-wrapper">
+        <button
+          id="mobile-search-btn"
+          class="mobile-search-btn"
+          aria-label="Search"
+        >
+          <img src="images/SEARCH-ICON-WHITE.svg" alt="Search" />
+        </button>
+        <input
+          type="text"
+          id="mobile-search"
+          class="mobile-search-input"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+      </div>
+
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+      </a>
+
+      <!-- Cart Button -->
+      <button id="cart-toggle-mobile" class="cart-btn" aria-label="Open cart">
+        <img src="images/CART-QTY.svg" alt="Cart" class="cart-img" />
+      </button>
+    </header>
+
     <main class="thank-you">
       <img src="images/THANK-YOU.svg" alt="Thank You" class="thank-you-img" />
       <h1>Thank you!</h1>
@@ -44,11 +74,10 @@
       <a href="index.html" class="continue-link">← Continue browsing</a>
     </main>
 
-     <script src="script.js"></script>
-
-    <!-- Footer -->
     <footer class="site-footer">
       <p>&copy; 2025 Agos Coffee. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

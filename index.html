@@ -4,14 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="icon" type="image/png" href="images/AGOS-FAVICON.svg" />
-    <title>Agos Coffee</title>
+    <title>Agos Coffee - Product List</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="page-wrapper">
-      <header class="site-header">
+      <!-- Desktop Header -->
+      <header class="site-header desktop-header">
         <div class="header-left">
-          <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+          <a href="index.html">
+            <img
+              src="images/AGOS-LOGO.png"
+              alt="Agos Coffee logo"
+              class="logo"
+            />
+          </a>
+
           <div class="brand">
             <h1>Agos Coffee</h1>
             <small class="tagline">Need that caffeine flow</small>
@@ -28,7 +36,6 @@
               aria-label="Search products"
             />
           </div>
-
           <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
             <img src="images/CART-QTY.svg" alt="Cart" class="cart-img" />
             <span id="cart-count" class="cart-count">0</span>
@@ -36,9 +43,40 @@
         </div>
       </header>
 
+      <!-- Mobile Header -->
+      <header class="site-header mobile-header">
+        <div class="mobile-search-wrapper">
+          <button
+            id="mobile-search-btn"
+            class="mobile-search-btn"
+            aria-label="Search"
+          >
+            <img src="images/SEARCH-ICON-WHITE.svg" alt="Search" />
+          </button>
+          <input
+            type="text"
+            id="mobile-search"
+            class="mobile-search-input"
+            placeholder="Search products..."
+            aria-label="Search products"
+          />
+        </div>
+
+        <!-- Logo -->
+        <a href="index.html">
+          <img src="images/AGOS-LOGO.png" alt="Agos Coffee logo" class="logo" />
+        </a>
+
+        <!-- Cart Button -->
+        <button id="cart-toggle-mobile" class="cart-btn" aria-label="Open cart">
+          <img src="images/CART-QTY.svg" alt="Cart" class="cart-img" />
+          <span id="cart-count-mobile" class="cart-count">0</span>
+        </button>
+      </header>
+
       <main class="container">
         <section class="content-left">
-          <h2 class="section-title">Popular</h2>
+          <h2 class="section-title" id="sectionTitle">Products</h2>
 
           <!-- Product grid -->
           <div class="product-grid" id="productGrid">
